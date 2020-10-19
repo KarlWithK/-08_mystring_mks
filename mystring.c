@@ -56,7 +56,23 @@ char *mystrncat(char *s1, char *s2, int size) {
   return s1;
 }
 
-/* char *mystrchr(char *s, int c) {} */
-/* int mystrcmp(char *s1, char *s2) {} */
-/* char *mystrcpy2(char *, char *) {} */
-/* char * mystrstr( char *s1, char * s2 ) {} */
+char *mystrchr(char *s, int c) {
+  int len = 0;
+  for (len = 0; len <= mystrlen(s); len++) {
+    if (*(s + len) == c)
+      return s + len;
+  }
+  return NULL;
+}
+
+int mystrcmp(char *s1, char *s2) {
+  while(*s1 || *s2) {
+    if (*s1 < *s2 ) 
+      return -1;
+    if (*s1 > *s2 ) 
+      return 1;
+    s1++;
+    s2++;
+  }
+  return 0;
+}
