@@ -57,7 +57,7 @@ char *mystrncat(char *s1, char *s2, int size) {
 }
 
 char *mystrchr(char *s, int c) {
-  int len = 0;
+  int len;
   for (len = 0; len <= mystrlen(s); len++) {
     if (*(s + len) == c)
       return s + len;
