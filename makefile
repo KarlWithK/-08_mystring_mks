@@ -2,8 +2,8 @@
 .PHONY: all clean
 BINARY=main
 CC= gcc
-# CFLAGS= -Wall -Wextra -Wpedantic -Wuninitialized -Wundef -Wcast-align -Wstrict-overflow=2 -Wwrite-strings -Wno-format-nonliteral
-CFLAGS= -Wall -Wpedantic -Werror -Wextra
+CFLAGS= -Wall -Wextra -Wpedantic -Wuninitialized -Wundef -Wcast-align -Wstrict-overflow=2 -Wwrite-strings -Wno-format-nonliteral
+# CFLAGS= -Wall -Wpedantic -Werror -Wextra
 OBJECTS= main.o mystring.o
 
 main: $(OBJECTS)
